@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/quiz_misterwiz.html" },
+    { "source": "/quiz", "destination": "/quiz_misterwiz.html" },
+    { "source": "/premio", "destination": "/premio_misterwiz.html" }
+  ]
+}
