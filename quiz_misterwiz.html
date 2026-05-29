@@ -629,7 +629,7 @@ function saveLead(data) {
 // ── PRIZE DOWNLOAD ──
 function downloadPrize() {
   const code = document.getElementById("voucher-code").textContent;
-  const url = "premio_misterwiz.html?code=" + encodeURIComponent(code);
+  const url = "/premio_misterwiz.html?code=" + encodeURIComponent(code);
   window.open(url, "_blank");
 }
 
