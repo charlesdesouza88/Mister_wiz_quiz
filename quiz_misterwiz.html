@@ -395,20 +395,12 @@
     <div class="result-title win" id="win-title">Incrível, você acertou tudo!</div>
     <div class="score-stars" id="win-stars">⭐⭐⭐</div>
     <div class="result-msg">Parabéns, você acertou todas as perguntas e aqui está o seu prêmio:</div>
-    <div class="voucher">
-      <div class="voucher-badge">🎁 Seu Prêmio</div>
-      <div class="voucher-title">Aula Experimental</div>
-      <div class="voucher-sub">Gratuita e sem compromisso na Mister Wiz</div>
-      <div class="voucher-code" id="voucher-code">WIZ-2025</div>
-      <div class="voucher-expire">Válido por 30 dias · Apresente este código</div>
-      <div class="voucher-logo">MISTER WIZ · Escola de Líderes</div>
-    </div>
+    <!-- hidden code anchor for JS to read -->
+    <span id="voucher-code" style="display:none;">WIZ-2025</span>
+    <iframe id="premio-frame" src="" style="width:100%;height:520px;border:none;border-radius:18px;margin:12px 0;" scrolling="no"></iframe>
     <a class="btn-whatsapp" id="whatsapp-win" href="#" target="_blank">
       💬 Agendar minha aula grátis
     </a>
-    <button class="btn-retry" id="btn-download-prize" onclick="downloadPrize()" style="background:linear-gradient(135deg,#F0A500,#e09400);color:#2D1040;border:none;font-family:'Fredoka One',cursive;font-size:17px;padding:13px;width:100%;border-radius:14px;cursor:pointer;margin-top:8px;box-shadow:0 4px 16px rgba(240,165,0,0.35);">
-      ⬇ Baixar meu prêmio
-    </button>
   </div>
 
   <!-- ── SCREEN 3b: LOSE ── -->
@@ -586,6 +578,7 @@ function showResult() {
   if (score === questions.length) {
     const code = "WIZ-" + Math.random().toString(36).substr(2,4).toUpperCase();
     document.getElementById("voucher-code").textContent = code;
+    document.getElementById("premio-frame").src = `/premio_misterwiz.html?code=${encodeURIComponent(code)}`;
     document.getElementById("win-title").textContent = `Incrível, ${userName}! Você acertou tudo!`;
     document.getElementById("win-stars").textContent = "⭐⭐⭐";
     document.getElementById("whatsapp-win").href = waLink;
