@@ -342,6 +342,26 @@
   }
   .btn-retry:hover { background: var(--purple-light); }
   .score-stars { font-size: 28px; margin: 6px 0 16px; letter-spacing: 4px; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 400px) {
+    body { padding: 8px; }
+    .card { padding: 24px 18px; border-radius: 20px; }
+    .reg-title { font-size: 22px; }
+    .q-text { font-size: 18px; }
+    .q-image-wrap { height: 150px; }
+    .opt-btn { font-size: 14px; padding: 11px 8px; }
+    .btn-start, .btn-next, .btn-whatsapp, .btn-retry { font-size: 16px; padding: 13px; }
+    .result-title { font-size: 20px; }
+  }
+  @media (max-width: 320px) {
+    .card { padding: 20px 14px; }
+    .options-grid { gap: 8px; }
+    .q-image-wrap { height: 130px; }
+  }
+  @media (min-width: 600px) {
+    .card { padding: 40px 40px; }
+  }
 </style>
 </head>
 <body>
